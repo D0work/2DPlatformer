@@ -36,7 +36,7 @@ public class GravityController : MonoBehaviour
 
             playerRb.gravityScale = gravityValue;
 
-            playerRb.velocity = Vector3.zero;
+            playerRb.linearVelocity = Vector3.zero;
             other.transform.rotation = Quaternion.Euler(0, 0, playerRotationZ);
 
             foreach (GameObject obj in GameObject.FindObjectsOfType<GameObject>())

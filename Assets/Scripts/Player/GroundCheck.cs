@@ -79,7 +79,7 @@ public class GroundCheck : MonoBehaviour
         Collider2D[] overlaps = new Collider2D[5];
         ContactFilter2D contactFilter = new ContactFilter2D();
         contactFilter.layerMask = groundLayers;
-        groundCheckCollider.OverlapCollider(contactFilter, overlaps);
+        groundCheckCollider.Overlap(contactFilter, overlaps);
 
         // Check if one of the overlapping colliders is on the "ground" layer
         foreach (Collider2D overlapCollider in overlaps)

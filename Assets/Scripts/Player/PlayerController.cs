@@ -276,15 +276,15 @@ public class PlayerController : MonoBehaviour
         {
             float horizontalVelocity = movementForce.x * dashMultiplier;
             float verticalVelocity = 0;
-            playerRigidbody.velocity = new Vector2(horizontalVelocity, verticalVelocity);
+            playerRigidbody.linearVelocity = new Vector2(horizontalVelocity, verticalVelocity);
         }
         else
         {
             float horizontalVelocity = movementForce.x * dashMultiplier;
-            float verticalVelocity = playerRigidbody.velocity.y;
-            playerRigidbody.velocity = new Vector2(horizontalVelocity, verticalVelocity);
+            float verticalVelocity = playerRigidbody.linearVelocity.y;
+            playerRigidbody.linearVelocity = new Vector2(horizontalVelocity, verticalVelocity);
         }
-        if (playerRigidbody.velocity.y > 0)
+        if (playerRigidbody.linearVelocity.y > 0)
         {
             foreach (string layerName in passThroughLayers)
             {
@@ -332,7 +332,7 @@ public class PlayerController : MonoBehaviour
             jumping = true;
             float time = 0;
             SpawnJumpEffect();
-            playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0);
+            playerRigidbody.linearVelocity = new Vector2(playerRigidbody.linearVelocity.x, 0);
             playerRigidbody.AddForce(transform.up * jumpPower * powerMultiplier, ForceMode2D.Impulse);
             timesJumped++;
             while (time < jumpDuration)
@@ -399,7 +399,7 @@ public class PlayerController : MonoBehaviour
 
         SpawnDashEffect(); 
         Vector2 dashDirection = transform.right.normalized; 
-        playerRigidbody.velocity = Vector2.zero;
+        playerRigidbody.linearVelocity = Vector2.zero;
         Vector2 Boost = dashDirection * dashBoost * powerMultiplier;
         playerRigidbody.AddForce(Boost, ForceMode2D.Impulse);
         Debug.Log("dashDirection: " + dashDirection.ToString() + " |Boost = " + Boost.ToString());
@@ -555,7 +555,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (grounded)
         {
-            if (Mathf.Abs(playerRigidbody.velocity.x) > 0.1f)
+            if (Mathf.Abs(playerRigidbody.linearVelocity.x) > 0.1f)
             {
                 SetState(PlayerState.Walk);
 

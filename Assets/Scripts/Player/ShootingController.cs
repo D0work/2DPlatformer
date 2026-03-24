@@ -199,7 +199,7 @@ public class ShootingController : MonoBehaviour
                     Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
                     if (rb != null)
                     {
-                        rb.velocity = fireDirection * fireRate;
+                        rb.linearVelocity = fireDirection * fireRate;
                     }
                 }
                 else
@@ -219,7 +219,7 @@ public class ShootingController : MonoBehaviour
                     Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
                     if (rb != null)
                     {
-                        rb.velocity = projectile.transform.right * fireRate;
+                        rb.linearVelocity = projectile.transform.right * fireRate;
                     }
                 }
 
@@ -252,7 +252,7 @@ public class ShootingController : MonoBehaviour
                 Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
-                    rb.velocity = fireDirection * fireRate;
+                    rb.linearVelocity = fireDirection * fireRate;
                 }
             }
         }

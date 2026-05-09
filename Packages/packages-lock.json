@@ -109,7 +109,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.28",
+      "version": "1.8.29",
       "depth": 3,
       "source": "registry",
       "dependencies": {
@@ -119,7 +119,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.11.4",
+      "version": "2.12.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -220,7 +220,7 @@
       }
     },
     "com.unity.test-framework.performance": {
-      "version": "3.2.0",
+      "version": "3.4.0",
       "depth": 3,
       "source": "registry",
       "dependencies": {
@@ -230,7 +230,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.8.11",
+      "version": "1.8.12",
       "depth": 0,
       "source": "registry",
       "dependencies": {
